@@ -94,18 +94,23 @@ namespace linq02
             //10.Check if ALL products in the"Seafood" category are in stock
             //bool isInStock = ProductList.All(p => p.Category == "Seafood" && p.UnitsInStock > 0);
             //Console.WriteLine(isInStock);
-  
+
             #endregion
 
             #region Q11
             //11.Check if the ID list contains 9
-            int[] ids = { 3, 9, 13, 18 };
-            bool contain9 = ids.Contains(9);
-            Console.WriteLine(contain9);
+            //int[] ids = { 3, 9, 13, 18 };
+            //bool contain9 = ids.Contains(9);
+            //Console.WriteLine(contain9);
             #endregion
 
             #region Q12
             //12.Group all products by Category and print each group with its product count.
+            var groups = ProductList.GroupBy(p => p.Category);
+            foreach (var group in groups)
+            {
+                Console.WriteLine($"{group.Key} - Count: {group.Count()}");
+            }
             #endregion
 
             #region Q13
