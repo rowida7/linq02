@@ -223,12 +223,14 @@ namespace linq02
 
             #region Q22
             //22.Get the first product whose price is greater than$50.
-            var first = ProductList.FirstOrDefault(p => p.UnitPrice > 50);
-            Console.WriteLine(first);
+            //var first = ProductList.FirstOrDefault(p => p.UnitPrice > 50);
+            //Console.WriteLine(first);
             #endregion
 
             #region Q23
             //23.Try to get the first product with a price>$500.it returns null instead of throwing.
+            var first = ProductList.FirstOrDefault(p => p.UnitPrice > 500);
+            Console.WriteLine(first);
             #endregion
 
             #region Q24
