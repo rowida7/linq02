@@ -174,17 +174,23 @@ namespace linq02
 
             #region Q18
             //18.Get a distinct list of all product categories
-            var distinct = ProductList.DistinctBy(p => p.Category);
-            foreach (var item in distinct)
-            {
-                Console.WriteLine(item);
-            }
+            //var distinct = ProductList.DistinctBy(p => p.Category);
+            //foreach (var item in distinct)
+            //{
+            //    Console.WriteLine(item);
+            //}
             #endregion
 
             #region Q19
             //19.find product IDs that are in setA but NOT in setB
-            //int[] setA = { 1, 3, 5, 7, 9, 11, 13 }; 
+            //int[] setA = { 1, 3, 5, 7, 9, 11, 13 };
             //int[] setB = { 3, 6, 9, 12, 15, 13 };
+            
+            //var res = setA.Except(setB);
+            //foreach (var item in res)
+            //{
+            //    Console.WriteLine(item);
+            //}
             #endregion
 
             #region Q20
