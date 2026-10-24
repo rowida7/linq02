@@ -115,20 +115,25 @@ namespace linq02
 
             #region Q13
             //13.Group products by Category and project only product names per group
-            var groups = ProductList.GroupBy(p => p.Category);
-            foreach (var group in groups)
-            {
-                Console.WriteLine($"{group.Key}");
-                foreach (var g in group)
-                {
-                    Console.WriteLine($"- {g.ProductName}");
-                }
+            //var groups = ProductList.GroupBy(p => p.Category);
+            //foreach (var group in groups)
+            //{
+            //    Console.WriteLine($"{group.Key}");
+            //    foreach (var g in group)
+            //    {
+            //        Console.WriteLine($"- {g.ProductName}");
+            //    }
 
-            }
+            //}
             #endregion
 
             #region Q14
             //14.Find all categories that have MORE THAN 3 products
+            var res = ProductList.GroupBy(p => p.Category).Where(g => g.Count() > 3);
+            foreach (var item in res)
+            {
+                Console.WriteLine(item.Key);
+            }
             #endregion
 
             #region Q15
