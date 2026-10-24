@@ -245,15 +245,23 @@ namespace linq02
 
             #region Q25
             //25.Generate even numbers between 1 and 30.
-            var evens = Enumerable.Range(1, 30).Where(n => n % 2 == 0);
-            foreach (var item in evens)
-            {
-                Console.WriteLine(item);
-            }
+            //var evens = Enumerable.Range(1, 30).Where(n => n % 2 == 0);
+            //foreach (var item in evens)
+            //{
+            //    Console.WriteLine(item);
+            //}
             #endregion
 
             #region Q26
             //26.Concatenate the first 3 product names with the first 3 customer company names into a single sequence.
+            //var products = ProductList.Select(p=> new {p.ProductName }).Take(3);
+            //var customers = CustomerList.Select(c => new { c.CustomerName }).Take(3);
+            //var concat = products.Zip(customers);
+            //foreach (var item in concat)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
             #endregion
 
 
