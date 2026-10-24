@@ -74,6 +74,11 @@ namespace linq02
 
             #region Q8
             //8.show page 2 of products, with page size = 5
+            //var page2 = ProductList.Skip((2 - 1) * 5).Take(5);
+            //foreach (var item in page2)
+            //{
+            //    Console.WriteLine(item);
+            //}
             #endregion
 
             #region Q9
