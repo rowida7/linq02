@@ -138,26 +138,28 @@ namespace linq02
 
             #region Q15
             //15.Using QUERY SYNTAX, group customers by Country, and for each group select{ Country, Count, TotalOrderValue}.
-            var groups = from c in CustomerList
-                         group c by c.Country
-                         into groupsByCountry
-                         select new
-                         {
-                             country = groupsByCountry.Key,
-                             count = groupsByCountry.Count(),
-                             TotalOrderValue = groupsByCountry
-                            .SelectMany(c => c.Orders)
-                            .Sum(o => o.Total)
+            //var groups = from c in CustomerList
+            //             group c by c.Country
+            //             into groupsByCountry
+            //             select new
+            //             {
+            //                 country = groupsByCountry.Key,
+            //                 count = groupsByCountry.Count(),
+            //                 TotalOrderValue = groupsByCountry
+            //                .SelectMany(c => c.Orders)
+            //                .Sum(o => o.Total)
 
-                         };
-            foreach (var item in groups)
-            {
-                Console.WriteLine(item);
-            }
+            //             };
+            //foreach (var item in groups)
+            //{
+            //    Console.WriteLine(item);
+            //}
             #endregion
 
             #region Q16
             //16.Calculate the total number of units in stock across all products
+            int total = ProductList.Sum(p => p.UnitsInStock);
+            Console.WriteLine(total);
             #endregion
 
             #region Q17
