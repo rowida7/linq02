@@ -217,12 +217,14 @@ namespace linq02
             #region Q21
             //21.Build a Dictionary<int, Product> keyed by ProductID.
             //Then retrieve and print the product with ID = 18.
-            var dictionary = ProductList.ToDictionary(p => p.ProductID);
-            Console.WriteLine(dictionary[18]);
+            //var dictionary = ProductList.ToDictionary(p => p.ProductID);
+            //Console.WriteLine(dictionary[18]);
             #endregion
 
             #region Q22
             //22.Get the first product whose price is greater than$50.
+            var first = ProductList.FirstOrDefault(p => p.UnitPrice > 50);
+            Console.WriteLine(first);
             #endregion
 
             #region Q23
