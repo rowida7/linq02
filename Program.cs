@@ -1,12 +1,4 @@
-﻿using linq02.Models;
-using System.ComponentModel;
-using System.Diagnostics;
-using System.Diagnostics.Metrics;
-using System.Drawing;
-using System.Globalization;
-using System.Runtime.ConstrainedExecution;
-using static LINQ.DataSources.Source;
-namespace linq02
+﻿namespace linq02
 {
     internal class Program
     {
@@ -47,16 +39,21 @@ namespace linq02
 
             #region Q4
             //4.Show position number alongside ProductName
-            var res = ProductList.Select((p, i) => (i+1) +" "+ p.ProductName);
-            foreach (var item in res)
-            {
-                Console.WriteLine(item);
-            }
+            //var res = ProductList.Select((p, i) => (i+1) +" "+ p.ProductName);
+            //foreach (var item in res)
+            //{
+            //    Console.WriteLine(item);
+            //}
             #endregion
 
             #region Q5
             //5.Sort first by-word length and then by a case -insensitive sort of the words in an array.
             //String[] Arr = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
+            //var sorted = Arr.OrderBy(x => x.Length).ThenBy(w => w, StringComparer.OrdinalIgnoreCase);
+            //foreach (var item in sorted)
+            //{
+            //    Console.WriteLine(item);
+            //}
             #endregion
 
             #region Q6
