@@ -229,12 +229,18 @@ namespace linq02
 
             #region Q23
             //23.Try to get the first product with a price>$500.it returns null instead of throwing.
-            var first = ProductList.FirstOrDefault(p => p.UnitPrice > 500);
-            Console.WriteLine(first);
+            //var first = ProductList.FirstOrDefault(p => p.UnitPrice > 500);
+            //Console.WriteLine(first);
             #endregion
 
             #region Q24
             //24.Generate a multiplication table row for 7
+            var table = Enumerable.Range(1, 7).Select(n => $"7 x {n} = {7 * n}");
+
+            foreach (var row in table)
+            {
+                Console.WriteLine(row);
+            }
             #endregion
 
             #region Q25
