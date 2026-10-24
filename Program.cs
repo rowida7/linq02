@@ -129,15 +129,31 @@ namespace linq02
 
             #region Q14
             //14.Find all categories that have MORE THAN 3 products
-            var res = ProductList.GroupBy(p => p.Category).Where(g => g.Count() > 3);
-            foreach (var item in res)
-            {
-                Console.WriteLine(item.Key);
-            }
+            //var res = ProductList.GroupBy(p => p.Category).Where(g => g.Count() > 3);
+            //foreach (var item in res)
+            //{
+            //    Console.WriteLine(item.Key);
+            //}
             #endregion
 
             #region Q15
             //15.Using QUERY SYNTAX, group customers by Country, and for each group select{ Country, Count, TotalOrderValue}.
+            var groups = from c in CustomerList
+                         group c by c.Country
+                         into groupsByCountry
+                         select new
+                         {
+                             country = groupsByCountry.Key,
+                             count = groupsByCountry.Count(),
+                             TotalOrderValue = groupsByCountry
+                            .SelectMany(c => c.Orders)
+                            .Sum(o => o.Total)
+
+                         };
+            foreach (var item in groups)
+            {
+                Console.WriteLine(item);
+            }
             #endregion
 
             #region Q16
