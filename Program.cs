@@ -25,15 +25,24 @@ namespace linq02
 
             #region Q2
             //2.Get all products from the "Beverages" category, sorted by UnitsInStock descending. Print name and stock.
-            var beverages = ProductList.Where(p=> p.Category == "Beverages").OrderByDescending(p=>p.UnitPrice);
-            foreach (var item in beverages)
-            {
-                Console.WriteLine($"{item.ProductName} => {item.UnitsInStock}");
-            }
+            //var beverages = ProductList.Where(p=> p.Category == "Beverages").OrderByDescending(p=>p.UnitPrice);
+            //foreach (var item in beverages)
+            //{
+            //    Console.WriteLine($"{item.ProductName} => {item.UnitsInStock}");
+            //}
             #endregion
 
             #region Q3
-            //3.Using QUERY SYNTAX with a compound from clause, list all orders placed in 1997 or later showing CustomerID and OrderDate.
+            //3.Using QUERY SYNTAX with a compound from clause, list all orders placed in 1997
+            //or later showing CustomerID and OrderDate.
+            //var ordersIn1997 = from c in CustomerList
+            //                   from o in c.Orders
+            //                   where o.OrderDate >= new DateTime(1997, 1, 1)
+            //                   select new { c.CustomerID, o.OrderDate };
+            //foreach (var item in ordersIn1997)
+            //{
+            //    Console.WriteLine(item);
+            //}
             #endregion
 
             #region Q4
@@ -94,28 +103,51 @@ namespace linq02
             //17.Find the CHEAPEST and MOST EXPENSIVE product prices
             #endregion
 
-            #region Q
+            #region Q18
+            //18.Get a distinct list of all product categories
             #endregion
 
-            //18.Get a distinct list of all product categories
+            #region Q19
+            //19.find product IDs that are in setA but NOT in setB
+            //int[] setA = { 1, 3, 5, 7, 9, 11, 13 }; 
+            //int[] setB = { 3, 6, 9, 12, 15, 13 };
+            #endregion
 
-            //19.find product IDs that are in setA but NOT in setB int[] setA = { 1, 3, 5, 7, 9, 11, 13 }; int[] setB = { 3, 6, 9, 12, 15, 13 };
+            #region Q20
+            //20.Find countries that appear in list1 but NOT in list2(case -insensitive).
+            //string[] list1 = { "Germany", "France", "UK", "Spain" }; string[] list2 = { "france", "SPAIN", "Italy" };
+            #endregion
 
-            //20.Find countries that appear in list1 but NOT in list2(case -insensitive). string[] list1 = { "Germany", "France", "UK", "Spain" }; string[] list2 = { "france", "SPAIN", "Italy" };
-
+            #region Q21
             //21.Build a Dictionary<int, Product> keyed by ProductID. Then retrieve and print the product with ID = 18.
+            #endregion
 
+            #region Q22
             //22.Get the first product whose price is greater than$50.
+            #endregion
 
+            #region Q23
             //23.Try to get the first product with a price>$500.it returns null instead of throwing.
+            #endregion
 
+            #region Q24
             //24.Generate a multiplication table row for 7
+            #endregion
 
+            #region Q25
             //25.Generate even numbers between 1 and 30.
+            #endregion
 
+            #region Q26
             //26.Concatenate the first 3 product names with the first 3 customer company names into a single sequence.
+            #endregion
 
+
+            #region Q27
             //27.Pair each product with a customer(by position) and produce a string"ProductName sold to CompanyName".
+            #endregion
+
+
         }
     }
 }
