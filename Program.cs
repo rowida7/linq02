@@ -158,12 +158,17 @@ namespace linq02
 
             #region Q16
             //16.Calculate the total number of units in stock across all products
-            int total = ProductList.Sum(p => p.UnitsInStock);
-            Console.WriteLine(total);
+            //int total = ProductList.Sum(p => p.UnitsInStock);
+            //Console.WriteLine(total);
             #endregion
 
             #region Q17
             //17.Find the CHEAPEST and MOST EXPENSIVE product prices
+            var cheapest = ProductList.Min(p => p.UnitPrice);
+            var expensive = ProductList.Max(p => p.UnitPrice);
+
+            Console.WriteLine(cheapest);
+            Console.WriteLine(expensive);
             #endregion
 
             #region Q18
