@@ -267,6 +267,13 @@ namespace linq02
 
             #region Q27
             //27.Pair each product with a customer(by position) and produce a string"ProductName sold to CompanyName".
+            var products = ProductList.Select(p => new { p.ProductName });
+            var customers = CustomerList.Select(c => new { c.CustomerName });
+            var concat = products.Zip(customers, (p,c) => $"{p.ProductName} sold to {c.CustomerName}");
+            foreach (var item in concat)
+            {
+                Console.WriteLine(item);
+            }
             #endregion
 
 
