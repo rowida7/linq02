@@ -1,4 +1,5 @@
-﻿namespace linq02
+﻿using static LINQ.DataSources.Source;
+namespace linq02
 {
     internal class Program
     {
@@ -57,12 +58,18 @@
             #endregion
 
             #region Q6
-            //6.Create a list of all digits in the array whose second letter is 'i' that is reversed from the order in the original array.
+            //6.Create a list of all digits in the array whose second letter is 'i'
+            //that is reversed from the order in the original array.
 
             #endregion
 
             #region Q7
             //7.Get top 3 most expensive products
+            //var highest3Products = ProductList.OrderByDescending(p => p.UnitPrice).Take(3);
+            //foreach (var item in highest3Products)
+            //{
+            //    Console.WriteLine(item);
+            //}
             #endregion
 
             #region Q8
