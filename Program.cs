@@ -14,17 +14,22 @@ namespace linq02
         {
             #region Q1
             //1.Sort ProductList by Category ascending, then within each category, sort by UnitPrice descending.
-            var sortedProducts = ProductList.OrderBy(p => p.Category)
-                                             .ThenByDescending(p => p.UnitPrice);
+            //var sortedProducts = ProductList.OrderBy(p => p.Category)
+            //                                 .ThenByDescending(p => p.UnitPrice);
 
-            foreach (var item in sortedProducts)
-            {
-                Console.WriteLine(item);
-            }
+            //foreach (var item in sortedProducts)
+            //{
+            //    Console.WriteLine(item);
+            //}
             #endregion
 
             #region Q2
             //2.Get all products from the "Beverages" category, sorted by UnitsInStock descending. Print name and stock.
+            var beverages = ProductList.Where(p=> p.Category == "Beverages").OrderByDescending(p=>p.UnitPrice);
+            foreach (var item in beverages)
+            {
+                Console.WriteLine($"{item.ProductName} => {item.UnitsInStock}");
+            }
             #endregion
 
             #region Q3
