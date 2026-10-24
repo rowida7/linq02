@@ -1,4 +1,5 @@
-﻿using static LINQ.DataSources.Source;
+﻿using System.Text.RegularExpressions;
+using static LINQ.DataSources.Source;
 namespace linq02
 {
     internal class Program
@@ -164,15 +165,20 @@ namespace linq02
 
             #region Q17
             //17.Find the CHEAPEST and MOST EXPENSIVE product prices
-            var cheapest = ProductList.Min(p => p.UnitPrice);
-            var expensive = ProductList.Max(p => p.UnitPrice);
+            //var cheapest = ProductList.Min(p => p.UnitPrice);
+            //var expensive = ProductList.Max(p => p.UnitPrice);
 
-            Console.WriteLine(cheapest);
-            Console.WriteLine(expensive);
+            //Console.WriteLine(cheapest);
+            //Console.WriteLine(expensive);
             #endregion
 
             #region Q18
             //18.Get a distinct list of all product categories
+            var distinct = ProductList.DistinctBy(p => p.Category);
+            foreach (var item in distinct)
+            {
+                Console.WriteLine(item);
+            }
             #endregion
 
             #region Q19
