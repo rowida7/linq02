@@ -61,6 +61,16 @@ namespace linq02
             #region Q6
             //6.Create a list of all digits in the array whose second letter is 'i'
             //that is reversed from the order in the original array.
+            string[] words = { "bird", "fish", "apple", "milk", "rice" };
+            var res = words
+                        .Where(w => w[1] == 'i')
+                        .Reverse()
+                        .ToList();
+
+            foreach (var item in res)
+            {
+                Console.WriteLine(item);
+            }
 
             #endregion
 
@@ -185,7 +195,7 @@ namespace linq02
             //19.find product IDs that are in setA but NOT in setB
             //int[] setA = { 1, 3, 5, 7, 9, 11, 13 };
             //int[] setB = { 3, 6, 9, 12, 15, 13 };
-            
+
             //var res = setA.Except(setB);
             //foreach (var item in res)
             //{
@@ -206,6 +216,7 @@ namespace linq02
 
             #region Q21
             //21.Build a Dictionary<int, Product> keyed by ProductID. Then retrieve and print the product with ID = 18.
+
             #endregion
 
             #region Q22
