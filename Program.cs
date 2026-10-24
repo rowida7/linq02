@@ -92,13 +92,16 @@ namespace linq02
 
             #region Q10
             //10.Check if ALL products in the"Seafood" category are in stock
-            bool isInStock = ProductList.All(p => p.Category == "Seafood" && p.UnitsInStock > 0);
-            Console.WriteLine(isInStock);
+            //bool isInStock = ProductList.All(p => p.Category == "Seafood" && p.UnitsInStock > 0);
+            //Console.WriteLine(isInStock);
   
             #endregion
 
             #region Q11
-            //11.Check if the ID list contains 9 int[] ids = { 3, 9, 13, 18 };
+            //11.Check if the ID list contains 9
+            int[] ids = { 3, 9, 13, 18 };
+            bool contain9 = ids.Contains(9);
+            Console.WriteLine(contain9);
             #endregion
 
             #region Q12
