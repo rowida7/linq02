@@ -83,15 +83,18 @@ namespace linq02
 
             #region Q9
             //9.Take products from the list as long as Their UnitPrice is less than $25(list is ordered by price).
-            var productLessThan25 = ProductList.OrderBy(p => p.UnitPrice).TakeWhile(p => p.UnitPrice < 25);
-            foreach (var item in productLessThan25)
-            {
-                Console.WriteLine(item);
-            }
+            //var productLessThan25 = ProductList.OrderBy(p => p.UnitPrice).TakeWhile(p => p.UnitPrice < 25);
+            //foreach (var item in productLessThan25)
+            //{
+            //    Console.WriteLine(item);
+            //}
             #endregion
 
             #region Q10
             //10.Check if ALL products in the"Seafood" category are in stock
+            bool isInStock = ProductList.All(p => p.Category == "Seafood" && p.UnitsInStock > 0);
+            Console.WriteLine(isInStock);
+  
             #endregion
 
             #region Q11
