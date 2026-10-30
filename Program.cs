@@ -19,11 +19,11 @@ namespace linq02
 
             #region Q2
             //2.Get all products from the "Beverages" category, sorted by UnitsInStock descending. Print name and stock.
-            //var beverages = ProductList.Where(p=> p.Category == "Beverages").OrderByDescending(p=>p.UnitPrice);
-            //foreach (var item in beverages)
-            //{
-            //    Console.WriteLine($"{item.ProductName} => {item.UnitsInStock}");
-            //}
+            var beverages = ProductList.Where(p => p.Category == "Beverages").OrderByDescending(p => p.UnitsInStock);
+            foreach (var item in beverages)
+            {
+                Console.WriteLine($"{item.ProductName} => {item.UnitsInStock}");
+            }
             #endregion
 
             #region Q3
@@ -267,13 +267,13 @@ namespace linq02
 
             #region Q27
             //27.Pair each product with a customer(by position) and produce a string"ProductName sold to CompanyName".
-            var products = ProductList.Select(p => new { p.ProductName });
-            var customers = CustomerList.Select(c => new { c.CustomerName });
-            var concat = products.Zip(customers, (p,c) => $"{p.ProductName} sold to {c.CustomerName}");
-            foreach (var item in concat)
-            {
-                Console.WriteLine(item);
-            }
+            //var products = ProductList.Select(p => new { p.ProductName });
+            //var customers = CustomerList.Select(c => new { c.CustomerName });
+            //var concat = products.Zip(customers, (p,c) => $"{p.ProductName} sold to {c.CustomerName}");
+            //foreach (var item in concat)
+            //{
+            //    Console.WriteLine(item);
+            //}
             #endregion
 
 
