@@ -19,11 +19,11 @@ namespace linq02
 
             #region Q2
             //2.Get all products from the "Beverages" category, sorted by UnitsInStock descending. Print name and stock.
-            var beverages = ProductList.Where(p => p.Category == "Beverages").OrderByDescending(p => p.UnitsInStock);
-            foreach (var item in beverages)
-            {
-                Console.WriteLine($"{item.ProductName} => {item.UnitsInStock}");
-            }
+            //var beverages = ProductList.Where(p => p.Category == "Beverages").OrderByDescending(p => p.UnitsInStock);
+            //foreach (var item in beverages)
+            //{
+            //    Console.WriteLine($"{item.ProductName} => {item.UnitsInStock}");
+            //}
             #endregion
 
             #region Q3
@@ -103,8 +103,9 @@ namespace linq02
 
             #region Q10
             //10.Check if ALL products in the"Seafood" category are in stock
-            //bool isInStock = ProductList.All(p => p.Category == "Seafood" && p.UnitsInStock > 0);
-            //Console.WriteLine(isInStock);
+            bool isInStock = ProductList.Where(p => p.Category == "Seafood")
+                             .All(p => p.UnitsInStock > 0);
+            Console.WriteLine(isInStock);
 
             #endregion
 
