@@ -103,9 +103,9 @@ namespace linq02
 
             #region Q10
             //10.Check if ALL products in the"Seafood" category are in stock
-            bool isInStock = ProductList.Where(p => p.Category == "Seafood")
-                             .All(p => p.UnitsInStock > 0);
-            Console.WriteLine(isInStock);
+            //bool isInStock = ProductList.Where(p => p.Category == "Seafood")
+            //                 .All(p => p.UnitsInStock > 0);
+            //Console.WriteLine(isInStock);
 
             #endregion
 
@@ -185,11 +185,12 @@ namespace linq02
 
             #region Q18
             //18.Get a distinct list of all product categories
-            //var distinct = ProductList.DistinctBy(p => p.Category);
-            //foreach (var item in distinct)
-            //{
-            //    Console.WriteLine(item);
-            //}
+            var distinct = ProductList.Select(p => p.Category)
+                                     .DistinctBy(c => c);
+            foreach (var item in distinct)
+            {
+                Console.WriteLine(item);
+            }
             #endregion
 
             #region Q19
