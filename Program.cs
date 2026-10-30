@@ -185,12 +185,12 @@ namespace linq02
 
             #region Q18
             //18.Get a distinct list of all product categories
-            var distinct = ProductList.Select(p => p.Category)
-                                     .DistinctBy(c => c);
-            foreach (var item in distinct)
-            {
-                Console.WriteLine(item);
-            }
+            //var distinct = ProductList.Select(p => p.Category)
+            //                         .DistinctBy(c => c);
+            //foreach (var item in distinct)
+            //{
+            //    Console.WriteLine(item);
+            //}
             #endregion
 
             #region Q19
@@ -237,12 +237,12 @@ namespace linq02
 
             #region Q24
             //24.Generate a multiplication table row for 7
-            //var table = Enumerable.Range(1, 7).Select(n => $"7 x {n} = {7 * n}");
+            var table = Enumerable.Range(1,10).Select(n => $"7 x {n} = {7 * n}");
 
-            //foreach (var row in table)
-            //{
-            //    Console.WriteLine(row);
-            //}
+            foreach (var row in table)
+            {
+                Console.WriteLine(row);
+            }
             #endregion
 
             #region Q25
